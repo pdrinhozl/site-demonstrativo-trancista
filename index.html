@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reliquias Braids — Trancista em Campinas SP</title>
+  <meta name="description" content="Reliquias Braids: tranças, entrelace e penteados especiais em Campinas, SP. Solicite seu agendamento pelo WhatsApp." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #B77A52;
+      --gold-light: #D8A27C;
+      --deep: #2B1B1A;
+      --warm: #422A27;
+      --cream: #FFF4EA;
+      --earth: #8C5A4B;
+      --terracota: #B86F5B;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--deep);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* NOISE TEXTURE OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.5;
+    }
+
+    /* ───── HERO ───── */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 92px 24px 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,146,42,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 80% 100%, rgba(196,92,38,0.15) 0%, transparent 60%),
+        linear-gradient(180deg, #2B1B1A 0%, #422A27 60%, #2B1B1A 100%);
+    }
+
+    .site-nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      z-index: 5;
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      max-width: calc(100% - 32px);
+      padding: 10px 16px;
+      transform: translateX(-50%);
+      background: rgba(43,27,26,0.72);
+      border: 1px solid rgba(255,244,234,0.14);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+    }
+
+    .site-nav a {
+      color: rgba(255,244,234,0.76);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-nav a:hover { color: var(--gold-light); }
+
+    :focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 4px;
+    }
+
+    /* Decorative circles afro pattern */
+    .circle-deco {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(200,146,42,0.12);
+      animation: rotateDeco 30s linear infinite;
+    }
+    .circle-deco:nth-child(1) { width: 500px; height: 500px; top: -100px; left: -150px; }
+    .circle-deco:nth-child(2) { width: 350px; height: 350px; top: -80px; left: -80px; animation-duration: 20s; animation-direction: reverse; border-color: rgba(200,146,42,0.08); }
+    .circle-deco:nth-child(3) { width: 700px; height: 700px; bottom: -200px; right: -200px; animation-duration: 40s; }
+
+    @keyframes rotateDeco {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 680px;
+    }
+
+    .hero-photo {
+      position: absolute;
+      right: 7vw;
+      bottom: 8vh;
+      z-index: 1;
+      width: 150px;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border: 1px solid rgba(200,146,42,0.45);
+      border-radius: 70px 8px 70px 8px;
+      transform: rotate(6deg);
+      opacity: 0.8;
+    }
+
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(200,146,42,0.15);
+      border: 1px solid rgba(200,146,42,0.35);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 12vw, 100px);
+      font-weight: 900;
+      line-height: 0.95;
+      color: var(--cream);
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+
+    .hero-title span {
+      display: block;
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--terracota) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(245,237,216,0.65);
+      letter-spacing: 0.5px;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-location {
+      margin-top: 10px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.8;
+      animation: fadeUp 1s 0.3s ease both;
+    }
+
+    .hero-ctas {
+      margin-top: 44px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 1s 0.4s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--deep);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 32px rgba(200,146,42,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(200,146,42,0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 16px 32px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,237,216,0.25);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245,237,216,0.07);
+      border-color: rgba(245,237,216,0.5);
+    }
+
+    /* SVG Icons inline */
+    .icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ───── DIVIDER ───── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,146,42,0.3), transparent);
+      margin: 0 auto;
+    }
+
+    /* ───── SERVICES ───── */
+    .section {
+      padding: 90px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      opacity: 0.8;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 6vw, 54px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 48px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(200,146,42,0.15);
+      border-radius: 20px;
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--terracota));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,146,42,0.4);
+      background: rgba(200,146,42,0.05);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-emoji {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: rgba(245,237,216,0.55);
+      line-height: 1.65;
+    }
+
+    /* ───── ABOUT ───── */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 680px) {
+      .about-wrap { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 28px 8px 28px 8px;
+      background: linear-gradient(135deg, rgba(200,146,42,0.15), rgba(196,92,38,0.1));
+      border: 1px solid rgba(200,146,42,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-placeholder-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 90px;
+      opacity: 0.08;
+      user-select: none;
+    }
+
+    .about-photo-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.5;
+      white-space: nowrap;
+    }
+
+    .about-stat {
+      position: absolute;
+      top: 24px;
+      right: -20px;
+      background: var(--warm);
+      border: 1px solid rgba(200,146,42,0.3);
+      border-radius: 16px;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold-light);
+      display: block;
+    }
+
+    .stat-lbl {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(245,237,216,0.5);
+    }
+
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(245,237,216,0.7);
+      margin-bottom: 16px;
+    }
+
+    .highlight-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--cream);
+    }
+
+    .highlight-line::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ───── SOCIAL PROOF ───── */
+    .proof-strip {
+      background: rgba(200,146,42,0.07);
+      border-top: 1px solid rgba(200,146,42,0.12);
+      border-bottom: 1px solid rgba(200,146,42,0.12);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .proof-strip p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 4vw, 30px);
+      font-style: italic;
+      color: var(--cream);
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .proof-strip span {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ───── CTA FINAL ───── */
+    .cta-section {
+      padding: 100px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(200,146,42,0.1), transparent);
+    }
+
+    .cta-section .section-title { margin-bottom: 20px; }
+
+    .cta-section p {
+      font-size: 16px;
+      color: rgba(245,237,216,0.6);
+      margin-bottom: 40px;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .booking-form {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 28px;
+      text-align: left;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(200,146,42,0.25);
+      border-radius: 8px;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .booking-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .booking-field.full { grid-column: 1 / -1; }
+
+    .booking-field label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .booking-field input,
+    .booking-field select,
+    .booking-field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      color: var(--cream);
+      font: inherit;
+      background: rgba(26,10,0,0.7);
+      border: 1px solid rgba(245,237,216,0.2);
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .booking-field input:focus,
+    .booking-field select:focus,
+    .booking-field textarea:focus { border-color: var(--gold); }
+
+    .booking-field select option { color: var(--deep); }
+    .booking-field textarea { min-height: 92px; resize: vertical; }
+
+    .availability-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--gold-light);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .availability-picker { grid-column: 1 / -1; }
+    .calendar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .calendar-head strong { color: var(--cream); font-family: 'Playfair Display', serif; font-size: 19px; text-transform: capitalize; }
+    .calendar-nav { display: flex; gap: 8px; }
+    .calendar-nav button { width: 34px; height: 34px; padding: 0; color: var(--cream); background: rgba(255,255,255,0.08); border: 1px solid rgba(245,237,216,0.2); border-radius: 50%; font-size: 18px; cursor: pointer; }
+    .calendar-nav button:disabled { cursor: not-allowed; opacity: 0.35; }
+    .calendar-week, .calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+    .calendar-week { margin-bottom: 6px; color: rgba(245,237,216,0.45); font-size: 10px; text-align: center; text-transform: uppercase; }
+    .calendar-day { min-height: 52px; padding: 6px 3px; color: rgba(245,237,216,0.3); background: transparent; border: 1px solid transparent; border-radius: 5px; font: inherit; font-size: 13px; }
+    .calendar-day:disabled { color: rgba(245,237,216,0.62); opacity: 1; }
+    button.calendar-day.available { color: var(--cream); background: rgba(183,122,82,0.2); border-color: rgba(216,162,124,0.45); cursor: pointer; }
+    button.calendar-day.available:hover, button.calendar-day.selected { color: var(--deep); background: var(--gold-light); }
+    .calendar-day small { display: block; margin-top: 4px; color: inherit; font-size: 9px; opacity: 0.75; }
+    .time-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .time-slot { width: auto !important; padding: 9px 14px !important; color: var(--cream) !important; background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(216,162,124,0.4) !important; cursor: pointer; }
+    .time-slot.selected, .time-slot:hover { color: var(--deep) !important; background: var(--gold-light) !important; }
+
+    .booking-form .btn-primary {
+      border: 0;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .booking-note {
+      margin: 14px 0 0 !important;
+      max-width: none !important;
+      font-size: 12px !important;
+      line-height: 1.5;
+      color: rgba(245,237,216,0.5) !important;
+      text-align: center;
+    }
+
+    .service-price {
+      display: block;
+      margin-top: 20px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .care-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(200,146,42,0.12);
+      border-bottom: 1px solid rgba(200,146,42,0.12);
+    }
+
+    .care-strip strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+    }
+
+    .care-strip span {
+      color: rgba(245,237,216,0.6);
+      font-size: 13px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(10,4,0,0.92);
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: min(900px, 100%);
+      max-height: 88vh;
+      object-fit: contain;
+      border: 1px solid rgba(200,146,42,0.35);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: var(--cream);
+      background: none;
+      border: 0;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .steps-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      padding: 24px;
+      border-left: 2px solid var(--gold);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .step-number {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+    }
+
+    .step h3 { margin-bottom: 8px; font-family: 'Playfair Display', serif; font-size: 20px; }
+    .step p { color: rgba(245,237,216,0.6); font-size: 13px; line-height: 1.6; }
+
+    .guidance-section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 24px;
+      text-align: center;
+    }
+
+    .guidance-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+      text-align: left;
+    }
+
+    .guidance-list p {
+      padding: 16px 18px;
+      color: rgba(245,237,216,0.7);
+      font-size: 14px;
+      line-height: 1.5;
+      border: 1px solid rgba(200,146,42,0.15);
+      border-radius: 4px;
+    }
+
+    .guidance-list strong { color: var(--gold-light); }
+
+    .cta-section > .hero-ctas .btn-primary { display: none; }
+
+    .policy-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 76px 24px;
+    }
+
+    .policy-intro {
+      max-width: 620px;
+      color: rgba(245,237,216,0.68);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .policy-item {
+      padding: 22px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(200,146,42,0.16);
+      border-radius: 6px;
+    }
+
+    .policy-item h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+    }
+
+    .policy-item p {
+      color: rgba(245,237,216,0.66);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 620px) {
+      .policy-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .booking-grid { grid-template-columns: 1fr; }
+      .booking-field.full { grid-column: auto; }
+      .booking-form { padding: 20px 16px; }
+      .care-strip { grid-template-columns: 1fr; gap: 24px; }
+      .hero-photo { right: 18px; bottom: 24px; width: 82px; opacity: 0.55; }
+    }
+
+    @media (max-width: 700px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ───── FOOTER ───── */
+    footer {
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(200,146,42,0.1);
+    }
+
+    footer p {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: rgba(245,237,216,0.3);
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ───── PORTFOLIO ───── */
+    .portfolio-section {
+      padding: 90px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 700px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      background: rgba(200,146,42,0.08);
+      border: 1px solid rgba(200,146,42,0.15);
+    }
+
+    .portfolio-item:first-child {
+      grid-column: span 2;
+      grid-row: span 1;
+      aspect-ratio: 16/10;
+    }
+
+    @media (min-width: 700px) {
+      .portfolio-item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+        aspect-ratio: unset;
+      }
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: brightness(0.9);
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,10,0,0.7) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+    .portfolio-tag {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* ───── FLOAT CTA ───── */
+    .float-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+      animation: pulse 2.5s ease infinite;
+      transition: transform 0.2s;
+    }
+
+    .float-btn:hover { transform: scale(1.05); }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 8px 48px rgba(37,211,102,0.65); }
+    }
+
+    /* ───── ANIMATIONS ───── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .about-stat { display: none; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .site-nav { gap: 12px; padding: 9px 12px; }
+      .site-nav a { font-size: 9px; letter-spacing: 0.5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Navegação principal">
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#agendamento">Agendamento</a>
+    <a href="#regras">Regras</a>
+  </nav>
+
+  <!-- FLOATING CTA -->
+  <a class="float-btn" href="https://wa.me/5519989060663?text=Reliquias+Braids%2C+como+posso+agendar%3F" target="_blank" rel="noopener">
+    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Agendar agora
+  </a>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="circle-deco"></div>
+    <div class="circle-deco"></div>
+    <div class="circle-deco"></div>
+    <div class="hero-photo" aria-hidden="true"><img src="inicio.jpg" alt="" /></div>
+
+    <div class="hero-content">
+      <span class="badge">✦ Campinas · São Paulo ✦</span>
+
+      <h1 class="hero-title">
+        Reliquias
+        <span>Braids</span>
+      </h1>
+
+      <p class="hero-sub">Tranças feitas com cuidado, beleza e personalidade</p>
+      <p class="hero-location">📍 Campinas · SP</p>
+
+      <div class="hero-ctas">
+        <a class="btn-primary" href="https://wa.me/5519989060663?text=Reliquias+Braids%2C+como+posso+agendar%3F" target="_blank" rel="noopener">
+          <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn-secondary" href="https://www.instagram.com/roberta_Braids2" target="_blank" rel="noopener">
+          <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Ver no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="steps-section">
+    <p class="section-label reveal">Como funciona</p>
+    <h2 class="section-title reveal">Seu horário em <em>três passos</em></h2>
+    <div class="steps-grid">
+      <article class="step reveal">
+        <span class="step-number">01</span>
+        <h3>Escolha seu estilo</h3>
+        <p>Veja o portfólio e indique o serviço que mais combina com você.</p>
+      </article>
+      <article class="step reveal">
+        <span class="step-number">02</span>
+        <h3>Envie o pedido</h3>
+        <p>Preencha seus dados, escolha uma data e indique o melhor horário.</p>
+      </article>
+      <article class="step reveal">
+        <span class="step-number">03</span>
+        <h3>Receba a confirmação</h3>
+        <p>O horário será reservado somente depois da confirmação pelo WhatsApp.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="section" id="servicos">
+    <p class="section-label reveal">Especialidades</p>
+    <h2 class="section-title reveal">Serviços que <em>transformam</em></h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-emoji">✊🏾</span>
+        <h3 class="service-name">Box Braids & Nagô</h3>
+        <p class="service-desc">Tranças raiz com acabamento impecável, feitas com técnica precisa e muito cuidado com cada fio.</p>
+        <span class="service-price">Valor sob consulta</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">🌿</span>
+        <h3 class="service-name">Entrelace</h3>
+        <p class="service-desc">Penteados com entrelace que valorizam a textura natural dos fios e criam visuais únicos e cheios de personalidade.</p>
+        <span class="service-price">Valor sob consulta</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">✨</span>
+        <h3 class="service-name">Penteados Especiais</h3>
+        <p class="service-desc">Twist, tranças soltas, infantil e muito mais. Reliquias domina diferentes estilos para cada ocasião e tipo de cabelo.</p>
+        <span class="service-price">Valor sob consulta</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="care-strip reveal">
+    <div><strong>Campinas</strong><span>Atendimento na região</span></div>
+    <div><strong>Horários</strong><span>Consulte a disponibilidade</span></div>
+    <div><strong>Agendamento</strong><span>Confirmação pelo WhatsApp</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="guidance-section">
+    <p class="section-label reveal">Antes de agendar</p>
+    <h2 class="section-title reveal">Tudo para seu atendimento <em>começar bem</em></h2>
+    <div class="guidance-list">
+      <p class="reveal"><strong>Valores:</strong> o preço é informado conforme o estilo, comprimento e quantidade de cabelo.</p>
+      <p class="reveal"><strong>Horários:</strong> envie sua preferência e aguarde a confirmação da disponibilidade pelo WhatsApp.</p>
+      <p class="reveal"><strong>Confirmação:</strong> o pedido enviado pelo formulário não reserva o horário automaticamente.</p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="regras">
+    <p class="section-label reveal">Regras de agendamento</p>
+    <h2 class="section-title reveal">Para cuidar do seu horário <em>com carinho</em></h2>
+    <p class="policy-intro reveal">Essas combinações ajudam a organizar a agenda e garantem um atendimento tranquilo para todas. Antes de confirmar, conversamos sobre todos os detalhes pelo WhatsApp.</p>
+    <div class="policy-grid">
+      <article class="policy-item reveal">
+        <h3>Sinal de reserva</h3>
+        <p>Para reservar o horário, é necessário o pagamento de um sinal de <strong>R$ 50,00</strong>. Esse valor será descontado do total do serviço no dia do atendimento.</p>
+      </article>
+      <article class="policy-item reveal">
+        <h3>Tolerância para atraso</h3>
+        <p>Há uma tolerância de <strong>10 minutos</strong>. Após esse período, o atendimento pode precisar ser remarcado para não prejudicar os próximos horários.</p>
+      </article>
+      <article class="policy-item reveal">
+        <h3>Cancelamento</h3>
+        <p>Cancelamentos avisados com pelo menos <strong>24 horas de antecedência</strong> podem ter o sinal transferido para uma nova data. Sem aviso ou em caso de não comparecimento, o sinal não é devolvido.</p>
+      </article>
+      <article class="policy-item reveal">
+        <h3>Remarcação</h3>
+        <p>A remarcação deve ser solicitada com pelo menos <strong>24 horas de antecedência</strong> e depende da disponibilidade da agenda. O sinal pode ser usado uma vez na nova data combinada.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section">
+    <div class="about-wrap">
+      <div class="about-visual reveal">
+        <div class="about-frame">
+          <img src="foto_roberta_site1.jpg" alt="Jamilly Reliquias — Trancista" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">✦</span>
+          <span class="stat-lbl">Campinas · SP</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label reveal">Sobre</p>
+        <h2 class="section-title reveal" style="margin-bottom: 24px;">Jamilly <em>Reliquias</em></h2>
+        <p class="reveal">Trancista apaixonada pela arte afro, Jamilly transforma cabelos e eleva autoestimas. Com técnica apurada e muita dedicação, cada atendimento é uma experiência única.</p>
+        <p class="reveal">Atende em Campinas · SP com agendamento fácil pelo WhatsApp ou Instagram.</p>
+        <div style="margin-top: 28px;">
+          <div class="highlight-line reveal">Penteados com tranças</div>
+          
+          <div class="highlight-line reveal">Tranças diversas</div>
+          <div class="highlight-line reveal">Atendimento personalizado</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUOTE STRIP ═══ -->
+  <div class="proof-strip">
+    <p class="reveal">"Cada trança carrega história, identidade e beleza."</p>
+    <span class="reveal">— Reliquias Braids · Campinas SP</span>
+  </div>
+
+  <!-- ═══ PORTFOLIO ═══ -->
+  <div class="divider"></div>
+  <section class="portfolio-section" id="portfolio">
+    <p class="section-label reveal" style="text-align:center">Portfólio</p>
+    <h2 class="section-title reveal" style="text-align:center; margin-bottom: 48px;">Os trabalhos <em>falam</em> por si</h2>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item reveal">
+        <img src="foto1.jpg" alt="Tranças com cachos prata" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Entrelace & Cachos</span>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <img src="foto2.jpg" alt="Tranças com cachos vista lateral" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Entrelace</span>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <img src="foto3.jpg" alt="Tranças infantis" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Tranças Infantis</span>
+        </div>
+      </div>
+      <div class="portfolio-item reveal">
+        <img src="foto4.jpg" alt="Tranças nagô infantis" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Nagô Infantil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="cta-section" id="agendamento">
+    <p class="section-label reveal">Agende já</p>
+    <h2 class="section-title reveal">Pronta para <em>se transformar?</em></h2>
+    <p class="reveal">Vamos escolher juntas o estilo ideal para você. Envie seus dados e conversamos pelo WhatsApp.</p>
+    <form class="booking-form reveal" id="booking-form" novalidate>
+      <div class="booking-grid">
+        <div class="booking-field">
+          <label for="client-name">Seu nome</label>
+          <input id="client-name" name="clientName" type="text" autocomplete="name" placeholder="Como posso te chamar?" required />
+        </div>
+        <div class="booking-field">
+          <label for="client-phone">Seu WhatsApp</label>
+          <input id="client-phone" name="clientPhone" type="tel" autocomplete="tel" placeholder="(19) 99999-9999" required />
+        </div>
+        <div class="booking-field">
+          <label for="service">Serviço</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Escolha um serviço</option>
+            <option>Box Braids & Nagô</option>
+            <option>Entrelace</option>
+            <option>Penteado especial</option>
+            <option>Ainda não sei</option>
+          </select>
+        </div>
+        <div class="booking-field availability-picker">
+          <label for="booking-date">Data desejada</label>
+          <input id="booking-date" name="bookingDate" type="hidden" required />
+          <div class="calendar-head"><strong id="calendar-month"></strong><div class="calendar-nav"><button type="button" id="previous-month" aria-label="Mês anterior">&lsaquo;</button><button type="button" id="next-month" aria-label="Próximo mês">&rsaquo;</button></div></div>
+          <div class="calendar-week"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+          <div class="calendar-days" id="calendar-days"></div>
+        </div>
+        <div class="booking-field">
+          <label for="booking-time">Horário desejado</label>
+          <div class="time-picker" id="time-picker"><span class="availability-note">Escolha um dia disponível.</span></div>
+          <input id="booking-time" name="bookingTime" type="hidden" />
+        </div>
+        <div class="booking-field full">
+          <label for="booking-notes">Observações</label>
+          <textarea id="booking-notes" name="notes" placeholder="Conte algo importante sobre o atendimento..."></textarea>
+        </div>
+        <p class="availability-note" id="availability-note">Os dias com horários livres ficam destacados no calendário.</p>
+      </div>
+      <button class="btn-primary" type="submit">Enviar pedido pelo WhatsApp</button>
+      <p class="booking-note">É só uma solicitação de horário. Eu confirmo a disponibilidade e os detalhes com você pelo WhatsApp.</p>
+    </form>
+    <div class="hero-ctas reveal">
+      <a class="btn-primary" href="https://wa.me/5519989060663?text=Reliquias+Braids%2C+como+posso+agendar%3F" target="_blank" rel="noopener">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a class="btn-secondary" href="https://www.instagram.com/roberta_Braids2" target="_blank" rel="noopener">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Ver Instagram
+      </a>
+    </div>
+  </section>
+
+  <div class="lightbox" id="portfolio-lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">&times;</button>
+    <img src="" alt="" id="lightbox-image" />
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <p>© 2026 Reliquias Braids · Trancista · Campinas SP · <a href="https://www.instagram.com/roberta_Braids2" target="_blank" rel="noopener">Ver Instagram</a></p>
+  </footer>
+
+  <script>
+    const bookingForm = document.getElementById('booking-form');
+    const bookingDate = document.getElementById('booking-date');
+    const bookingTime = document.getElementById('booking-time');
+    const calendarMonth = document.getElementById('calendar-month');
+    const calendarDays = document.getElementById('calendar-days');
+    const timePicker = document.getElementById('time-picker');
+    const availabilityNote = document.getElementById('availability-note');
+    let visibleMonth = new Date();
+    visibleMonth.setDate(1);
+    const currentMonth = new Date();
+    currentMonth.setDate(1);
+    let calendarInitialized = false;
+    let monthAvailability = [];
+    let selectedBookingTime = '';
+
+    async function loadCalendar() {
+      const month = visibleMonth.toISOString().slice(0, 7);
+      document.getElementById('previous-month').disabled = visibleMonth <= currentMonth;
+      calendarMonth.textContent = visibleMonth.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
+      let data;
+      try {
+        const response = await fetch(`/api/availability?month=${month}`);
+        if (!response.ok) throw new Error('Servidor indisponível');
+        data = await response.json();
+      } catch (error) {
+        const lastDay = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() + 1, 0).getDate();
+        data = { today: new Date().toISOString().slice(0, 10), availability: [] };
+        for (let day = 1; day <= lastDay; day += 1) {
+          const date = `${month}-${String(day).padStart(2, '0')}`;
+          const weekday = new Date(`${date}T00:00:00`).getDay();
+          const slots = weekday === 0 || date < data.today ? [] : ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
+          data.availability.push({ date, slots });
+        }
+        availabilityNote.textContent = 'Modo demonstrativo: os horários exibidos são exemplos de disponibilidade.';
+      }
+      if (!calendarInitialized) {
+        const serverDate = new Date(`${data.today}T00:00:00`);
+        currentMonth.setTime(serverDate.getTime());
+        currentMonth.setDate(1);
+        if (serverDate.getMonth() !== visibleMonth.getMonth() || serverDate.getFullYear() !== visibleMonth.getFullYear()) {
+          visibleMonth = serverDate;
+          visibleMonth.setDate(1);
+          calendarInitialized = true;
+          return loadCalendar();
+        }
+        calendarInitialized = true;
+      }
+      monthAvailability = data.availability;
+      const firstDay = (new Date(`${month}-01T00:00:00`).getDay() + 6) % 7;
+      const daysInMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() + 1, 0).getDate();
+      calendarDays.innerHTML = '';
+      for (let blank = 0; blank < firstDay; blank += 1) calendarDays.appendChild(document.createElement('span'));
+      for (let day = 1; day <= daysInMonth; day += 1) {
+        const date = `${month}-${String(day).padStart(2, '0')}`;
+        const entry = monthAvailability.find((item) => item.date === date);
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `calendar-day${entry?.slots.length ? ' available' : ''}${bookingDate.value === date ? ' selected' : ''}`;
+        button.disabled = !entry?.slots.length;
+        button.innerHTML = `${day}${entry?.slots.length ? `<small>${entry.slots.length} horários</small>` : '<small>fechado</small>'}`;
+        if (entry?.slots.length) button.addEventListener('click', () => selectDate(date, entry.slots, button));
+        calendarDays.appendChild(button);
+      }
+    }
+
+    function selectDate(date, slots, selectedButton) {
+      bookingDate.value = date;
+      selectedBookingTime = '';
+      bookingTime.value = '';
+      document.querySelectorAll('.calendar-day').forEach((day) => day.classList.remove('selected'));
+      selectedButton.classList.add('selected');
+      bookingTime.innerHTML = '<option value="">Escolha um horário</option>' + slots.map((slot) => `<option value="${slot}">${slot}</option>`).join('');
+      timePicker.innerHTML = slots.map((slot) => `<button type="button" class="time-slot" data-time="${slot}">${slot}</button>`).join('');
+      timePicker.querySelectorAll('.time-slot').forEach((button) => button.addEventListener('click', () => {
+        selectedBookingTime = button.dataset.time;
+        bookingTime.value = selectedBookingTime;
+        timePicker.querySelectorAll('.time-slot').forEach((item) => item.classList.remove('selected'));
+        button.classList.add('selected');
+        availabilityNote.textContent = `Você escolheu ${new Date(`${date}T00:00:00`).toLocaleDateString('pt-BR')} às ${button.dataset.time}.`;
+      }));
+      availabilityNote.textContent = 'Agora escolha um dos horários livres abaixo.';
+    }
+
+    document.getElementById('previous-month').addEventListener('click', () => { if (visibleMonth > currentMonth) { visibleMonth.setMonth(visibleMonth.getMonth() - 1); loadCalendar(); } });
+    document.getElementById('next-month').addEventListener('click', () => { visibleMonth.setMonth(visibleMonth.getMonth() + 1); loadCalendar(); });
+    loadCalendar();
+
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(bookingForm);
+      if (!data.get('bookingTime') && selectedBookingTime) {
+        bookingTime.value = selectedBookingTime;
+      }
+      const requiredFields = [
+        ['clientName', 'seu nome'],
+        ['clientPhone', 'seu WhatsApp'],
+        ['service', 'o serviço'],
+        ['bookingDate', 'um dia disponível'],
+        ['bookingTime', 'um horário disponível']
+      ];
+      const missingField = requiredFields.find(([name]) => !data.get(name));
+      if (missingField) {
+        availabilityNote.textContent = `Para enviar, escolha ${missingField[1]}.`;
+        return;
+      }
+      const submitButton = bookingForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando pedido...';
+      fetch('/api/bookings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+        name: data.get('clientName'), phone: data.get('clientPhone'), service: data.get('service'), date: data.get('bookingDate'),
+        time: data.get('bookingTime'), notes: data.get('notes')
+      }) }).then(async (response) => {
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error);
+        const requestedDate = new Date(`${data.get('bookingDate')}T00:00:00`).toLocaleDateString('pt-BR');
+        const message = `Ola, Jamilly! Enviei um pedido de agendamento pelo site para ${requestedDate} as ${data.get('bookingTime')}. Meu nome e ${data.get('clientName')}.`;
+        window.open(`https://wa.me/5519989060663?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+        bookingForm.reset(); selectedBookingTime = ''; bookingTime.value = '';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar pedido pelo WhatsApp';
+        availabilityNote.textContent = 'Pedido enviado. Aguarde sua confirmação pelo WhatsApp.';
+      }).catch((submitError) => {
+        const requestedDate = new Date(`${data.get('bookingDate')}T00:00:00`).toLocaleDateString('pt-BR');
+        const message = `Ola, Jamilly! Gostaria de solicitar um agendamento para ${requestedDate} as ${data.get('bookingTime')}. Meu nome e ${data.get('clientName')}. Servico: ${data.get('service')}.`;
+        window.open(`https://wa.me/5519989060663?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar pedido pelo WhatsApp';
+        availabilityNote.textContent = 'Demonstração enviada pelo WhatsApp. No site publicado, a reserva será salva quando o servidor estiver conectado.';
+      });
+    });
+
+    const lightbox = document.getElementById('portfolio-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    document.querySelectorAll('.portfolio-item img').forEach((image) => {
+      image.parentElement.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add('open');
+      });
+    });
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('open');
+      }
+    });
+
+    // Scroll reveal
+    const els = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
