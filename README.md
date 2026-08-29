@@ -1,92 +1,114 @@
 <div align="center">
 
-# ✨ Reliquias Braids
-
-### Site profissional para trancista 💇🏾‍♀️
-
-[🌐 Ver Projeto](#) • [💻 Código](#)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a120c,50:8b5e3c,100:c9a66b&height=220&section=header&text=Reliquias%20Braids&fontSize=55&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Site%20profissional%20para%20trancista&descAlignY=60&descSize=18"/>
 
 <br>
 
-<img src="inicio.jpg" width="850">
+<img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=22&duration=3000&pause=1000&color=C9A66B&center=true&vCenter=true&width=700&lines=✨+Beleza+%7C+Identidade+%7C+Estilo;💇🏾‍♀️+Site+profissional+para+trancista;📅+Agendamento+online;💬+Integração+com+WhatsApp;📱+Experiência+responsiva"/>
 
 </div>
 
 ---
 
-## 💫 Sobre o projeto
+<div align="center">
 
-O **Reliquias Braids** é um site demonstrativo desenvolvido para uma profissional especializada em tranças.
+### 🌸 Um site criado para transformar visitantes em clientes.
 
-A proposta é unir **design elegante, experiência do usuário e funcionalidades reais**, criando uma presença digital que facilite o contato e o agendamento de clientes.
+</div>
 
 ---
 
-## ✨ O que o site oferece
+## ✨ Sobre o projeto
+
+O **Reliquias Braids** é um site demonstrativo desenvolvido para uma profissional especializada em tranças.
+
+O projeto combina **design sofisticado, responsividade e funcionalidades reais**, criando uma experiência digital focada em apresentar os trabalhos e facilitar o agendamento.
+
+<br>
 
 <div align="center">
 
 | 📅 Agendamento | 💬 WhatsApp | 📱 Responsivo |
 |:---:|:---:|:---:|
-| Calendário com disponibilidade | Solicitação direto pelo WhatsApp | Celular, tablet e PC |
+| Calendário e horários | Contato direto | Mobile & Desktop |
 
 | 💇 Serviços | 📋 Regras | ✨ Animações |
 |:---:|:---:|:---:|
-| Apresentação dos serviços | Informações antes do atendimento | Elementos animados durante a navegação |
+| Apresentação dos serviços | Informações do atendimento | Interface dinâmica |
 
 </div>
 
 ---
 
-## 📅 Agendamento online
+# 📅 Sistema de Agendamento
 
-Uma das principais funcionalidades do projeto.
+<div align="center">
 
-A cliente consegue:
+### Uma experiência simples para a cliente.
 
-**1.** Informar seus dados  
-**2.** Escolher o serviço  
-**3.** Selecionar uma data  
-**4.** Escolher um horário disponível  
-**5.** Adicionar observações  
-**6.** Enviar a solicitação pelo WhatsApp
+**👤 Dados pessoais**
 
-> ⚠️ O horário só é confirmado após a validação da disponibilidade.
+⬇️
 
----
+**💇 Escolha do serviço**
 
-## 💬 Integração com WhatsApp
+⬇️
 
-O site foi pensado para transformar visitantes em clientes.
+**📆 Escolha da data**
 
-O WhatsApp está presente em pontos estratégicos da página, incluindo um **botão flutuante**, facilitando o contato durante toda a navegação.
+⬇️
 
-O formulário também prepara a mensagem de agendamento automaticamente.
+**🕐 Escolha do horário**
 
----
+⬇️
 
-## 🎨 Design
+**💬 Solicitação pelo WhatsApp**
 
-### Uma identidade visual pensada para o segmento de beleza.
+</div>
 
-- ✨ Visual sofisticado
-- 🤎 Paleta elegante
-- 📸 Destaque para os trabalhos
-- 🧩 Layout organizado
-- 📱 Experiência responsiva
-- 🎞️ Animações suaves
+<br>
+
+O sistema permite que a cliente informe seus dados, escolha o serviço, selecione uma data e um horário disponível e envie a solicitação.
+
+Os horários são consultados através da API de disponibilidade.
 
 ---
 
-## 🧠 Destaques técnicos
+# 💬 WhatsApp
+
+<div align="center">
+
+### 📲 Atendimento sem complicação
+
+</div>
+
+O WhatsApp está integrado ao site para facilitar o contato com a profissional.
+
+Além do botão flutuante, o formulário prepara automaticamente uma mensagem com as informações do agendamento.
+
+---
+
+# ✨ Experiência visual
+
+<div align="center">
+
+<img src="inicio.jpg" width="850">
+
+</div>
+
+<br>
+
+### 🎨 Características
 
 ```text
-HTML5
-CSS3
-JavaScript
-IntersectionObserver
-Fetch API
-Calendário dinâmico
-Sistema de disponibilidade
-Integração com WhatsApp
-Responsive Design
+╭──────────────────────────────────────╮
+│                                      │
+│  ✨ Design sofisticado               │
+│  📸 Foco visual nos trabalhos        │
+│  📱 Layout responsivo                │
+│  🎞️ Animações suaves                 │
+│  💬 WhatsApp integrado               │
+│  📅 Sistema de agendamento           │
+│  ⚡ Interface dinâmica                │
+│                                      │
+╰──────────────────────────────────────╯
