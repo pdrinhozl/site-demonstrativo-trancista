@@ -1,10 +1,20 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a120c,50:8b5e3c,100:c9a66b&height=220&section=header&text=Reliquias%20Braids&fontSize=55&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Site%20profissional%20para%20trancista&descAlignY=60&descSize=18"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:120C08,50:5C3B24,100:C9A66B&text=RELIQUIAS%20BRAIDS&fontColor=FFFFFF&fontSize=48&fontAlignY=38&desc=Uma%20experiência%20digital%20criada%20para%20beleza%20e%20identidade.&descSize=17&descAlignY=60&animation=fadeIn"/>
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=22&duration=3000&pause=1000&color=C9A66B&center=true&vCenter=true&width=700&lines=✨+Beleza+%7C+Identidade+%7C+Estilo;💇🏾‍♀️+Site+profissional+para+trancista;📅+Agendamento+online;💬+Integração+com+WhatsApp;📱+Experiência+responsiva"/>
+<img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=22&duration=2800&pause=900&color=C9A66B&center=true&vCenter=true&width=800&lines=✨+Design+sofisticado;📅+Agendamento+online;💬+WhatsApp+integrado;📱+100%25+responsivo;⚡+Experiência+interativa"/>
+
+<br><br>
+
+<a href="#">
+<img src="https://img.shields.io/badge/🌐_VISITAR_PROJETO-C9A66B?style=for-the-badge&labelColor=17120E">
+</a>
+
+<a href="#">
+<img src="https://img.shields.io/badge/💻_VER_CÓDIGO-17120E?style=for-the-badge&labelColor=17120E">
+</a>
 
 </div>
 
@@ -12,103 +22,100 @@
 
 <div align="center">
 
-### 🌸 Um site criado para transformar visitantes em clientes.
+# 🌸 Mais do que um site.
+## Uma experiência.
 
 </div>
+
+O **Reliquias Braids** é um projeto de desenvolvimento web criado para apresentar uma profissional de tranças de maneira moderna, elegante e profissional.
+
+A proposta não foi criar apenas uma página informativa.
+
+Foi criar uma experiência onde a cliente pode **conhecer os serviços, visualizar os trabalhos, consultar datas, escolher horários e iniciar o contato para agendamento.**
 
 ---
 
-## ✨ Sobre o projeto
-
-O **Reliquias Braids** é um site demonstrativo desenvolvido para uma profissional especializada em tranças.
-
-O projeto combina **design sofisticado, responsividade e funcionalidades reais**, criando uma experiência digital focada em apresentar os trabalhos e facilitar o agendamento.
-
-<br>
-
 <div align="center">
 
-| 📅 Agendamento | 💬 WhatsApp | 📱 Responsivo |
-|:---:|:---:|:---:|
-| Calendário e horários | Contato direto | Mobile & Desktop |
-
-| 💇 Serviços | 📋 Regras | ✨ Animações |
-|:---:|:---:|:---:|
-| Apresentação dos serviços | Informações do atendimento | Interface dinâmica |
+### ✨ O projeto em números
 
 </div>
+
+<table align="center">
+<tr>
+<td align="center" width="180">
+
+### 📅
+**AGENDAMENTO**
+
+Calendário + horários
+
+</td>
+
+<td align="center" width="180">
+
+### 💬
+**WHATSAPP**
+
+Contato integrado
+
+</td>
+
+<td align="center" width="180">
+
+### 📱
+**RESPONSIVO**
+
+Mobile + Desktop
+
+</td>
+
+<td align="center" width="180">
+
+### ⚡
+**INTERATIVO**
+
+Animações + interação
+
+</td>
+</tr>
+</table>
 
 ---
 
-# 📅 Sistema de Agendamento
+# 💫 Uma experiência pensada para a cliente
 
 <div align="center">
-
-### Uma experiência simples para a cliente.
-
-**👤 Dados pessoais**
-
-⬇️
-
-**💇 Escolha do serviço**
-
-⬇️
-
-**📆 Escolha da data**
-
-⬇️
-
-**🕐 Escolha do horário**
-
-⬇️
-
-**💬 Solicitação pelo WhatsApp**
-
-</div>
-
-<br>
-
-O sistema permite que a cliente informe seus dados, escolha o serviço, selecione uma data e um horário disponível e envie a solicitação.
-
-Os horários são consultados através da API de disponibilidade.
-
----
-
-# 💬 WhatsApp
-
-<div align="center">
-
-### 📲 Atendimento sem complicação
-
-</div>
-
-O WhatsApp está integrado ao site para facilitar o contato com a profissional.
-
-Além do botão flutuante, o formulário prepara automaticamente uma mensagem com as informações do agendamento.
-
----
-
-# ✨ Experiência visual
-
-<div align="center">
-
-<img src="inicio.jpg" width="850">
-
-</div>
-
-<br>
-
-### 🎨 Características
 
 ```text
-╭──────────────────────────────────────╮
-│                                      │
-│  ✨ Design sofisticado               │
-│  📸 Foco visual nos trabalhos        │
-│  📱 Layout responsivo                │
-│  🎞️ Animações suaves                 │
-│  💬 WhatsApp integrado               │
-│  📅 Sistema de agendamento           │
-│  ⚡ Interface dinâmica                │
-│                                      │
-╰──────────────────────────────────────╯
+         👩‍🦱
+          │
+          ▼
+   ┌───────────────┐
+   │   CONHECER    │
+   │    SERVIÇOS   │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │    ESCOLHER   │
+   │     ESTILO    │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │     DATA +    │
+   │    HORÁRIO    │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │    ENVIAR     │
+   │    PEDIDO     │
+   └───────┬───────┘
+           │
+           ▼
+        💬 WHATSAPP
+           │
+           ▼
+          ✨
