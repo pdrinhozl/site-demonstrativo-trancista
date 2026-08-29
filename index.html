@@ -584,31 +584,6 @@
       text-transform: uppercase;
     }
 
-    .care-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      text-align: center;
-      border-top: 1px solid rgba(200,146,42,0.12);
-      border-bottom: 1px solid rgba(200,146,42,0.12);
-    }
-
-    .care-strip strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--gold-light);
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-    }
-
-    .care-strip span {
-      color: rgba(245,237,216,0.6);
-      font-size: 13px;
-    }
-
     .lightbox {
       position: fixed;
       inset: 0;
@@ -744,7 +719,6 @@
       .booking-grid { grid-template-columns: 1fr; }
       .booking-field.full { grid-column: auto; }
       .booking-form { padding: 20px 16px; }
-      .care-strip { grid-template-columns: 1fr; gap: 24px; }
       .hero-photo { right: 18px; bottom: 24px; width: 82px; opacity: 0.55; }
     }
 
@@ -1012,12 +986,6 @@
     </div>
   </section>
 
-  <div class="care-strip reveal">
-    <div><strong>Campinas</strong><span>Atendimento na região</span></div>
-    <div><strong>Horários</strong><span>Consulte a disponibilidade</span></div>
-    <div><strong>Agendamento</strong><span>Confirmação pelo WhatsApp</span></div>
-  </div>
-
   <div class="divider"></div>
 
   <!-- ═══ ABOUT ═══ -->
@@ -1210,22 +1178,8 @@
       const month = visibleMonth.toISOString().slice(0, 7);
       document.getElementById('previous-month').disabled = visibleMonth <= currentMonth;
       calendarMonth.textContent = visibleMonth.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
-      let data;
-      try {
-        const response = await fetch(`/api/availability?month=${month}`);
-        if (!response.ok) throw new Error('Servidor indisponível');
-        data = await response.json();
-      } catch (error) {
-        const lastDay = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() + 1, 0).getDate();
-        data = { today: new Date().toISOString().slice(0, 10), availability: [] };
-        for (let day = 1; day <= lastDay; day += 1) {
-          const date = `${month}-${String(day).padStart(2, '0')}`;
-          const weekday = new Date(`${date}T00:00:00`).getDay();
-          const slots = weekday === 0 || date < data.today ? [] : ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
-          data.availability.push({ date, slots });
-        }
-        availabilityNote.textContent = 'Modo demonstrativo: os horários exibidos são exemplos de disponibilidade.';
-      }
+      const response = await fetch(`/api/availability?month=${month}`);
+      const data = await response.json();
       if (!calendarInitialized) {
         const serverDate = new Date(`${data.today}T00:00:00`);
         currentMonth.setTime(serverDate.getTime());
@@ -1313,12 +1267,9 @@
         submitButton.textContent = 'Enviar pedido pelo WhatsApp';
         availabilityNote.textContent = 'Pedido enviado. Aguarde sua confirmação pelo WhatsApp.';
       }).catch((submitError) => {
-        const requestedDate = new Date(`${data.get('bookingDate')}T00:00:00`).toLocaleDateString('pt-BR');
-        const message = `Ola, Jamilly! Gostaria de solicitar um agendamento para ${requestedDate} as ${data.get('bookingTime')}. Meu nome e ${data.get('clientName')}. Servico: ${data.get('service')}.`;
-        window.open(`https://wa.me/5519989060663?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
         submitButton.disabled = false;
         submitButton.textContent = 'Enviar pedido pelo WhatsApp';
-        availabilityNote.textContent = 'Demonstração enviada pelo WhatsApp. No site publicado, a reserva será salva quando o servidor estiver conectado.';
+        availabilityNote.textContent = submitError.message;
       });
     });
 
